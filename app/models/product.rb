@@ -1,6 +1,8 @@
 class Product < ActiveRecord::Base
-	def get_suggested_items
+	before_save :get_suggested_items
 
+	def get_suggested_items
+		puts "hey"
 	end
 
 end

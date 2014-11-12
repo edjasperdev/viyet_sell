@@ -15,8 +15,9 @@ ActiveRecord::Schema.define(version: 20141112195522) do
 
   create_table "products", force: true do |t|
     t.string   "name"
-    t.string   "price"
-    t.string   "type"
+    t.integer  "price"
+    t.integer  "original_price"
+    t.string   "furniture_type"
     t.boolean  "suggested_price"
     t.datetime "created_at"
     t.datetime "updated_at"

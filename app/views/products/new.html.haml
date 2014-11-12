@@ -1,0 +1,14 @@
+= form_for(@product) do |f|
+	= f.label :name, 'Product Name'
+	= f.text_field :name, :placeholder => "Name the product"
+	%p
+	= f.label :original_price, 'Original Price'
+	= f.text_field :original_price, :placeholder => "Original item price?"
+	%p
+	= f.label :price, 'What would you like to sell for?'
+	= f.text_field :price, :placeholder => "Selling Price"
+	%p
+	= f.label :furniture_type, 'What type of furniture'
+	= f.text_field :furniture_type, :placeholder => "Type of furniture"
+	%p
+	= f.submit
