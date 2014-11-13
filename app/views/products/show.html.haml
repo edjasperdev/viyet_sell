@@ -1,0 +1,23 @@
+Product Name
+%br 
+= @product.name
+%br 
+Original Price
+%br 
+= @product.original_price
+%br 
+Your Price
+%br
+= @product.price
+%p
+
+Suggested Prices - Select a suggested price or keep your own.
+
+= form_tag(product_path, method: :patch) do
+	-@suggested_items.each do |item|
+		=radio_button_tag :price, item.price
+		=label_tag "#{item.name} - $#{item.price}"
+		%br
+	=submit_tag
+
+

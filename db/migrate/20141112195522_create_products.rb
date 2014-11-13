@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.integer :price
       t.integer :original_price
-      t.string :furniture_type
       t.boolean :suggested_price
       t.timestamps
     end

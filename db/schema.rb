@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20141112195522) do
     t.string   "name"
     t.integer  "price"
     t.integer  "original_price"
-    t.string   "furniture_type"
     t.boolean  "suggested_price"
     t.datetime "created_at"
     t.datetime "updated_at"
