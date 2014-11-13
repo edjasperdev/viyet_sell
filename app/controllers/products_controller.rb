@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 	def create
 		@product = Product.new(product_params)
 		if @product.save
-			@suggested_items = Product.get_suggested_items(@product.price).limit(5)
+			@suggested_items = Product.get_suggested_items(@product.price).limit(6)
 			redirect_to product_path(@product.id)
 		else
 			flash[:notice] = "Remember, product must be between $1,000 and $10,000"
