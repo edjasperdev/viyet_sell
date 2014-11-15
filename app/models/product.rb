@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
 	validates_inclusion_of :price, :in => 1000..10000
 
 	def self.get_suggested_items(original_price, furniture)
-  	where("furniture_type = ?", "#{furniture}").order("abs(products.price - #{original_price}/0.70)")
+  	where("furniture_type = ?", "#{furniture}").order("abs(products.price - #{original_price}/0.60)")
   end
 
 end

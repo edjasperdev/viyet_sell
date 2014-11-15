@@ -1,8 +1,14 @@
 -@products.each do |product|
-	%h3 
-		#{product.name} - $#{product.price}
-	%h4
-		Was: #{product.original_price}
-		%br	#{product.furniture_type}
-
-=link_to 'List New Product', root_path
+	%div.row
+		%br
+		%div.col-md-2.col-sm-3.text-center
+			%img{:src =>"http://st.houzz.com/simgs/44c17109008d7497_3-7029/transitional-living-room.jpg", :style => "width:150px;height:150px", :class => "img-rounded"}
+		%div.col-md-10.col-sm-9
+			%h3 
+				#{product.name} 
+				%br Now: $#{product.price}
+			%div.row
+				%div.col-xs-9
+					%h4
+						%span.label.label-default Was: #{product.original_price}
+					#{product.furniture_type}

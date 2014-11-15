@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ViyetSell</title>
+  <title>Viyet // Sell</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -35,9 +35,6 @@
         <li>
           <%= link_to "List New Product", new_product_path %>
         </li>
-        <li>
-          <a href="#">Category</a>
-        </li>
       </ul>
     </nav>
   </div>
@@ -54,8 +51,7 @@
         <div class="well well-lg"> 
           <div class="row">
             <div class="col-sm-12">
-              
-      
+              <a href="https://viyet.com/under-1500.html"><img src= "http://i62.tinypic.com/11lhovq.jpg"></a>
             </div>
           </div>
         </div>
@@ -82,24 +78,38 @@
         <div class="panel-body">
           
           <%= yield %>
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <ul class="list-inline">
-          <li><i class="icon-facebook icon-2x"></i></li>
-          <li><i class="icon-twitter icon-2x"></i></li>
-          <li><i class="icon-google-plus icon-2x"></i></li>
-          <li><i class="icon-pinterest icon-2x"></i></li>
-        </ul>
         
+          
+        </div>
       </div>
-      <div class="col-sm-6">
-          <p class="pull-right">Built for VIYET</p>      
+                                                                                       
+                                                  
+                                                      
+    </div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="http://www.facebook.com/viyetNY"><i class="icon-twitter icon-large"></i> Twitter</a>
+     <a class="btn btn-facebook btn-lg" href="https://twitter.com/viyetNY"><i class="icon-facebook icon-large"></i> Facebook</a>
+     <a class="btn btn-google-plus btn-lg" href="http://www.pinterest.com/viyet/"><i class="icon-pinterest icon-large"></i> Pinterest</a>
+
       </div>
+      <a href="http://viyet.com"><p class="pull-right">Built for VIYET</p></a>
     </div>
   </div>
-</footer>
+</div>
+
+<hr>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 </body>
