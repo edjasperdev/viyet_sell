@@ -1,3 +1,8 @@
-= @products.each do |product|
-	=product.name
-	=product.price
+-@products.each do |product|
+	%h3 
+		#{product.name} - $#{product.price}
+	%h4
+		#{product.original_price}
+		#{product.furniture_type}
+
+=link_to 'List New Product', root_path

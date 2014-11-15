@@ -1,44 +1,42 @@
 class ProductsController < ApplicationController
 
-	def create
+  def create
     binding.pry
-		@product = Product.new(product_params)
-		if @product.save
-      @suggested_items = Product.get_suggested_items(@product.price).limit(5)
-		else
-			flash[:notice] = "Remember, product must be between $1,000 and $10,000"
-			render :new
-		end
-	end
+    @product = Product.new(product_params)
+    if @product.save
+      redirect_to product_path(@product.id)
+    else
+      flash[:notice] = "Remember, product must be between $1,000 and $10,000"
+      render :new
+    end
+  end
 
   def new
-  	@product = Product.new
+    @product = Product.new
+    @furniture_types = Product.all.map {|product| product.furniture_type}.uniq
+  end
+
+  def set_price
+    @product = Product.new(product_params)
+    @suggested_items = Product.get_suggested_items(product_params[:original_price], product_params[:furniture_type]).limit(5)
   end
 
   def show
-  	@product = Product.find(params[:id])
-  	@suggested_items = Product.get_suggested_items(@product.price).limit(5)
-  	if @suggested_price
-  		@product.price = new_price
-  		@product.save
-  	end
-  end
-
-  def update
-  	@product = Product.find(params[:id])
-	  	if @product.update(price: params[:price])
-	  		redirect_to root_path
-	  	end
+    @product = Product.find(params[:id])
   end
 
   def index
-  	@products = Product.all
+    @products = Product.all
   end
 
   private
 
+  def total_params
+    params.require(:product).permit(:name, :original_price, :price)
+  end
+
   def product_params
-		params.require(:product).permit(:name, :price, :original_price, :furniture_type, :suggested_price)
-	end
+    params.require(:product).permit(:name, :price, :original_price, :furniture_type, :suggested_price)
+  end
 
 end

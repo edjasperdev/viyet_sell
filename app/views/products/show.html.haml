@@ -1,31 +1,7 @@
-<div class="row setup-content" id="step-2">
-<div class="col-xs-12">
-<div class="col-md-12">
-<div class="form-group">
-%h3 Step 1
-%h4 Product Name
-%br 
-= @product.name
-%br 
-%h4 Original Price
-%br 
-= @product.original_price
-%br 
-%h4 Your Price
-%br
-= @product.price
-%p
+=@product.name
+=@product.price
+=@product.original_price
+=@product.furniture_type
 
-%h3 Suggested Prices - Select a suggested price or keep your own.
-
-= form_tag(product_path, method: :patch) do
-	-@suggested_items.each do |item|
-		=radio_button_tag :price, item.price
-		=label_tag "#{item.name} - $#{item.price}"
-		%br
-
-	=submit_tag "Next", :class => "btn btn-primary nextBtn btn-lg pull-right"
-
-</div>
-</div>
-</div>
+=link_to 'View All Products on Sale', products_path
+=link_to 'List New Product', root_path
