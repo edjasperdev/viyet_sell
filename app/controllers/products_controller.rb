@@ -31,10 +31,6 @@ class ProductsController < ApplicationController
 
   private
 
-  def total_params
-    params.require(:product).permit(:name, :original_price, :price)
-  end
-
   def product_params
     params.require(:product).permit(:name, :price, :original_price, :furniture_type, :suggested_price)
   end

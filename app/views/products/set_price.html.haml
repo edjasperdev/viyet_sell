@@ -16,6 +16,7 @@
 	=f.hidden_field (:original_price)
 	=hidden_field_tag ('original_price')
 
+
 	=f.submit "Next", :class => "btn btn-primary nextBtn btn-lg pull-right"
 
 %h2 -or- 
@@ -34,11 +35,10 @@
 		=hidden_field_tag ('furniture_type')
 		=f.hidden_field (:original_price)
 		=hidden_field_tag ('original_price')
+		=f.hidden_field (:suggested_price)
+		=hidden_field_tag ('suggested_price')
 		%br
 
 
 	=f.submit "Next", :class => "btn btn-primary nextBtn btn-lg pull-right"
 
-</div>
-</div>
-</div>
