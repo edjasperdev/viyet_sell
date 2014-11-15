@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'products#new'
+  root 'products#index'
 
   resources :products
 

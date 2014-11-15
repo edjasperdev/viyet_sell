@@ -28,12 +28,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Home</a>
+      <%= link_to "Home", root_path, :class=> "navbar-brand" %>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
-          <a href="#">Category</a>
+          <%= link_to "List New Product", new_product_path %>
         </li>
         <li>
           <a href="#">Category</a>
@@ -95,7 +95,7 @@
         
       </div>
       <div class="col-sm-6">
-          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+          <p class="pull-right">Built for VIYET</p>      
       </div>
     </div>
   </div>
