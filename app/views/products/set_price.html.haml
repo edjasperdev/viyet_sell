@@ -23,23 +23,26 @@
 
 %h3 Select a suggested price.
 %h4 *based on 60% of your products original price
+%div.row
+	%class.col-md-7
+		= form_for(@product) do |f|
+			-@suggested_items.each do |item|
+				%img{:src =>"#{item.image_url}", :style => "width:150px;height:150px", :class => "img-rounded"}
+				%br
+				=f.radio_button :price, item.price
+				=f.label "#{item.name} - $#{item.price}"
+				%br
+				=f.label "Original Price:"  " $#{item.original_price}"
+				=f.hidden_field (:name)
+				=hidden_field_tag ('name')
+				=f.hidden_field (:furniture_type)
+				=hidden_field_tag ('furniture_type')
+				=f.hidden_field (:original_price)
+				=hidden_field_tag ('original_price')
+				=f.hidden_field (:suggested_price)
+				=hidden_field_tag ('suggested_price')
+				%br
 
-= form_for(@product) do |f|
-	-@suggested_items.each do |item|
-		=f.radio_button :price, item.price
-		=f.label "#{item.name} - $#{item.price}"
-		%br
-		=f.label "Original Price:"  " $#{item.original_price}"
-		=f.hidden_field (:name)
-		=hidden_field_tag ('name')
-		=f.hidden_field (:furniture_type)
-		=hidden_field_tag ('furniture_type')
-		=f.hidden_field (:original_price)
-		=hidden_field_tag ('original_price')
-		=f.hidden_field (:suggested_price)
-		=hidden_field_tag ('suggested_price')
-		%br
 
-
-	=f.submit "Next", :class => "btn btn-primary nextBtn btn-lg pull-right"
+			=f.submit "Next", :class => "btn btn-primary nextBtn btn-lg pull-right"
 

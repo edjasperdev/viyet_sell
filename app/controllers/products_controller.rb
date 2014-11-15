@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
 
   def create
-    binding.pry
     @product = Product.new(product_params)
     if @product.save
       redirect_to product_path(@product.id)
@@ -32,7 +31,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :original_price, :furniture_type, :suggested_price)
+    params.require(:product).permit(:name, :price, :original_price, :furniture_type, :suggested_price, :image_url)
   end
 
 end

@@ -1,11 +1,15 @@
 = form_for(@product, url: :products_set_price) do |f|
-	= f.label :name, 'Product Name', :class => "control-label"
+	= f.label :name, 'Product Name'
 	%br 
-	= f.text_field :name, :placeholder => "Name the product", :class => "control-label"
+	= f.text_field :name, :placeholder => "Name the product"
 	%br 
-	= f.label :original_price, 'Original Price', :class => "control-label"
+	= f.label :original_price, 'Original Price'
 	%br 
-	= f.text_field :original_price, :placeholder => "Original item price?", :class => "control-label"
+	= f.text_field :original_price, :placeholder => "Original item price?"
+	%br 
+	= f.label :image_url, 'Add a photo of your item'
+	%br 
+	= f.text_field :image_url, :placeholder => "Add Image Url"
 	%br 
 	= f.label :furniture_type, 'What type of furniture are you selling?'
 	%br
