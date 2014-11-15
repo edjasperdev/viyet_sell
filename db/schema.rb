@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141112195522) do
     t.integer  "price"
     t.integer  "original_price"
     t.boolean  "suggested_price"
+    t.text     "image_url",       default: "https://pbs.twimg.com/profile_images/457585226072338432/869gzRdR_400x400.jpeg"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

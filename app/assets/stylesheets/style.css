@@ -11,12 +11,12 @@ h1,h2,h3,.highlight,.navbar a,#masthead h4 {
   font-family:'Helvetica',arial narrow,sans-serif;
 }
 
-footer {
-
-  margin-top:40px;
-  padding-top:40px;
+#footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
   padding-bottom:40px;
-  background-color:#fff;
+  background-color:#030027;
  
 }
 
@@ -35,11 +35,11 @@ footer {
 }
 
 #masthead .well {
-  margin-top:31px;
-  background-color:#152B4B;
-  border-color:#000022;
+  margin-top:20px;
+  background-color:#030027;
+  border-color:#030027;
   color:#efefff;
-  min-height:127px;
+  min-height:100px;
 }
 
 #topPanel {
@@ -78,7 +78,7 @@ a,a:hover {
 }
 
 .navbar-bright {
-  background-color:#152B4B;
+  background-color:#030027;
   color:#fff;
   margin-bottom: 0;
   border-width: 0;
