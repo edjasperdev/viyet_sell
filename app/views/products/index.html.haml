@@ -2,7 +2,7 @@
 	%h3 
 		#{product.name} - $#{product.price}
 	%h4
-		#{product.original_price}
-		#{product.furniture_type}
+		Was: #{product.original_price}
+		%br	#{product.furniture_type}
 
 =link_to 'List New Product', root_path
